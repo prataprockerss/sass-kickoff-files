@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Roboto:300,400,500,700,900);
 a,
 abbr,
 acronym,
@@ -79,7 +78,6 @@ video {
   font: inherit;
   vertical-align: baseline; }
 
-/*Reset css start */
 article,
 aside,
 details,
@@ -110,275 +108,89 @@ table {
   border-spacing: 0; }
 
 /*Reset css end */
-:root {
-  font-size: 16px; }
-
-/*Global Css starts */
-a {
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  outline: none;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-body {
-  line-height: 1;
-  font: 1em "Roboto", sans-serif;
-  color: #000;
-  position: relative;
-  background: #fff; }
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-word-break: keep-all;
-  -o-word-break: keep-all;
-  -moz-word-break: keep-all;
-  -ms-word-break: keep-all;
-  word-break: keep-all; }
-
-img {
-  max-width: 100%;
-  vertical-align: middle; }
-
-.container {
-  margin: 0 auto;
-  width: 96%;
-  max-width: 1400px; }
-
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
-
-.text-right {
-  text-align: right; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
-p {
-  font: 300 1em/1.5em "Droid Serif", serif;
-  padding-bottom: 12px; }
-
-.clear20, .clear40, .clear60,
-.clear {
-  clear: both; }
-
-.clear20 {
-  height: 20px; }
-
-.clear40 {
-  height: 40px; }
-
-.clear60 {
-  height: 60px; }
-
-h2, h3, h4, h5, h6,
-h1 {
-  color: #53BA2E;
-  font: 2.125em "Roboto", sans-serif;
-  padding-bottom: 12px; }
-
-h2 {
-  font-size: 1.9375em; }
-
-h3 {
-  font-size: 1.75em; }
-
-h4 {
-  font-size: 1.5625em; }
-
-h5 {
-  font-size: 1.375em; }
-
-h6 {
-  font-size: 1.1875em; }
-
-.desktop-only {
-  display: block; }
-
-.mobile-only,
-.tab-mobile-only,
-.tab-only {
-  display: none; }
-
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 .loader {
-  background: url("../images/loader.gif") no-repeat scroll center center #203651;
-  height: 100%;
-  left: 0;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 99999; }
-
-.loader.loaded {
-  top: -100%; }
-
-/*Global Css End */
-/*form tag */
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  margin: 0;
-  font: 0.75em "Roboto", sans-serif;
-  outline: none;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-  input[type="date"]:active, input[type="date"]:focus,
-  input[type="email"]:active,
-  input[type="email"]:focus,
-  input[type="number"]:active,
-  input[type="number"]:focus,
-  input[type="password"]:active,
-  input[type="password"]:focus,
-  input[type="text"]:active,
-  input[type="text"]:focus,
-  select:active,
-  select:focus,
-  textarea:active,
-  textarea:focus {
-    outline: none; }
-
-select {
-  background: none;
-  padding: 9px 10px;
-  cursor: pointer; }
-
-textarea {
-  resize: none;
-  height: 80px; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 5px 0 0; }
-
-/*Form Tag end */
-span.has-error, label.has-error {
-  background: none repeat scroll 0 0 #f00;
-  color: #fff;
-  display: inline-block;
-  font-size: 12px;
-  margin-top: 10px;
-  padding: 4px 10px;
-  position: relative; }
-
-/*Common Buttons */
-a.box-btn,
-button.box-btn,
-input[type=button],
-input[type=reset],
-input[type=submit] {
-  display: inline-block;
-  margin: 5px;
-  background-color: #53BA2E;
-  border: none;
-  cursor: pointer;
-  padding: 10px 15px;
-  color: white;
-  font: 400 1em "Roboto", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-  a.box-btn.full-btn,
-  button.box-btn.full-btn,
-  input[type=button].full-btn,
-  input[type=reset].full-btn,
-  input[type=submit].full-btn {
+  height: 100%;
+  z-index: 100003;
+  background: url("../images/loader.gif") no-repeat center center;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .loader div {
     display: block;
-    width: 100%;
-    margin: 0; }
-  a.box-btn.rounded,
-  button.box-btn.rounded,
-  input[type=button].rounded,
-  input[type=reset].rounded,
-  input[type=submit].rounded {
-    border-radius: 50px; }
-  a.box-btn.active, a.box-btn:hover,
-  button.box-btn.active,
-  button.box-btn:hover,
-  input[type=button].active,
-  input[type=button]:hover,
-  input[type=reset].active,
-  input[type=reset]:hover,
-  input[type=submit].active,
-  input[type=submit]:hover {
-    background-color: #8edc72; }
-  a.box-btn.secondary-btn,
-  button.box-btn.secondary-btn,
-  input[type=button].secondary-btn,
-  input[type=reset].secondary-btn,
-  input[type=submit].secondary-btn {
-    background-color: #952eba;
-    color: white; }
-    a.box-btn.secondary-btn.active, a.box-btn.secondary-btn:hover,
-    button.box-btn.secondary-btn.active,
-    button.box-btn.secondary-btn:hover,
-    input[type=button].secondary-btn.active,
-    input[type=button].secondary-btn:hover,
-    input[type=reset].secondary-btn.active,
-    input[type=reset].secondary-btn:hover,
-    input[type=submit].secondary-btn.active,
-    input[type=submit].secondary-btn:hover {
-      background-color: #ae49d2; }
-  a.box-btn:active, a.box-btn:focus,
-  button.box-btn:active,
-  button.box-btn:focus,
-  input[type=button]:active,
-  input[type=button]:focus,
-  input[type=reset]:active,
-  input[type=reset]:focus,
-  input[type=submit]:active,
-  input[type=submit]:focus {
-    outline: none; }
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #000;
+    -webkit-animation: spin 2s linear infinite;
+    -o-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    -ms-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 1001; }
+    .loader div:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #333333;
+      -webkit-animation: spin 2s linear infinite;
+      -o-animation: spin 2s linear infinite;
+      -moz-animation: spin 2s linear infinite;
+      -ms-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite; }
+    .loader div:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #666666;
+      -webkit-animation: spin 1s linear infinite;
+      -o-animation: spin 1s linear infinite;
+      -moz-animation: spin 1s linear infinite;
+      -ms-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite; }
 
-/*hack for mozzila */
-@-moz-document url-prefix() {
-  a.box-btn {
-    padding-top: 11px;
-    padding-bottom: 11px; } }
-/*hack for mozzila end */
-.input-type-select {
-  overflow: hidden;
-  position: relative; }
-  .input-type-select:after {
-    background: url("../images/custom-select.png") no-repeat scroll center center;
-    content: "";
-    display: block;
-    height: 40px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 41px;
-    z-index: 99999; }
+.test {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,114 +1,98 @@
-=input($elements... , $inputs...)
-  @each $input in $inputs
-    input[type="#{$input}"]
-      @content
-
-  @each $element in $elements
-    #{$element}
-      @content
-
-+input((select,.sample-class),(text,button))
+/*form tag*/
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="text"],
+select,
+textarea
+  width: 100%
+  padding: 10px
+  border: none
+  margin: 0
+  font: rem(12) $pf
+  outline: none
+  +transition
+  &:active,&:focus
+    outline: none
+select
+  background: none
+  padding: 9px 10px
+  cursor: pointer
+textarea
+  resize: none
+  height: 80px
+input[type="checkbox"],
+input[type="radio"]
+  display: inline-block
+  vertical-align: middle
+  margin: 0 5px 0 0
+/*Form Tag end*/
+span,label
+  &.has-error
+    background: none repeat scroll 0 0 #f00
+    color: #fff
+    display: inline-block
+    font-size: 12px
+    margin-top: 10px
+    padding: 4px 10px
+    position: relative
+/*Common Buttons*/
+$pad: 10px
+a.box-btn,
+button.box-btn,
+input[type=button],
+input[type=reset],
+input[type=submit]
+  display: inline-block
+  border: none
+  cursor: pointer
+  color: lighten($pc, 100%)
+  font: 400 rem(16) $pf
+  letter-spacing: 2px
+  text-transform: uppercase
+  vertical-align: middle
+  text-decoration: none
   text-align: center
+  +transition
+  &.box-btn
+    padding: $pad 15px
+    margin: 5px
+    background-color: $pc
+  &.full-btn
+    display: block
+    width: 100%
+    margin: 0
+  &.rounded
+    border-radius: 50px
+  &.active,&:hover
+    background-color: lighten($pc, 20)
+  &.secondary-btn
+    background-color: $sc
+    color: lighten($sc, 100%)
+    &.active,&:hover
+      background-color: lighten($sc, 10)
+  &:active,&:focus
+    outline: none
+/*hack for mozzila */
+@-moz-document url-prefix()
+  a.box-btn
+    padding-top: $pad + 1px
+    padding-bottom: $pad + 1px
+/*hack for mozzila end*/
+// Common buttons end
 
-select{
-  text-align: center
-}
-
-// /*form tag*/
-// input[type="date"],
-// input[type="email"],
-// input[type="number"],
-// input[type="password"],
-// input[type="text"],
-// select,
-// textarea
-//   width: 100%
-//   padding: 10px
-//   border: none
-//   margin: 0
-//   font: rem(12) $pf
-//   outline: none
-//   +transition
-//   &:active,&:focus
-//     outline: none
-// select
-//   background: none
-//   padding: 9px 10px
-//   cursor: pointer
-// textarea
-//   resize: none
-//   height: 80px
-// input[type="checkbox"],
-// input[type="radio"]
-//   display: inline-block
-//   vertical-align: middle
-//   margin: 0 5px 0 0
-// /*Form Tag end*/
-// span,label
-//   &.has-error
-//     background: none repeat scroll 0 0 #f00
-//     color: #fff
-//     display: inline-block
-//     font-size: 12px
-//     margin-top: 10px
-//     padding: 4px 10px
-//     position: relative
-// /*Common Buttons*/
-// $pad: 10px
-// a.box-btn,
-// button.box-btn,
-// input[type=button],
-// input[type=reset],
-// input[type=submit]
-//   display: inline-block
-//   border: none
-//   cursor: pointer
-//   color: lighten($pc, 100%)
-//   font: 400 rem(16) $pf
-//   letter-spacing: 2px
-//   text-transform: uppercase
-//   vertical-align: middle
-//   text-decoration: none
-//   text-align: center
-//   +transition
-//   &.box-btn
-//     padding: $pad 15px
-//     margin: 5px
-//     background-color: $pc
-//   &.full-btn
-//     display: block
-//     width: 100%
-//     margin: 0
-//   &.rounded
-//     border-radius: 50px
-//   &.active,&:hover
-//     background-color: lighten($pc, 20)
-//   &.secondary-btn
-//     background-color: $sc
-//     color: lighten($sc, 100%)
-//     &.active,&:hover
-//       background-color: lighten($sc, 10)
-//   &:active,&:focus
-//     outline: none
-// /*hack for mozzila */
-// @-moz-document url-prefix()
-//   a.box-btn
-//     padding-top: $pad + 1px
-//     padding-bottom: $pad + 1px
-// /*hack for mozzila end*/
-// // Common buttons end
-//
-// // Custom input types
-// .input-type-select
-//   overflow: hidden
-//   position: relative
-//   &:after
-//     background: bg('custom-select.png') no-repeat scroll center center
-//     content: ""
-//     display: block
-//     height: 40px
-//     position: absolute
-//     right: 0
-//     top: 0
-//     width: 41px
-//     z-index: 99999
+// Custom input types
+.input-type-select
+  overflow: hidden
+  position: relative
+  &:after
+    background: bg('custom-select.png') no-repeat scroll center center
+    content: ""
+    display: block
+    height: 40px
+    position: absolute
+    right: 0
+    top: 0
+    width: 41px
+    z-index: 99999

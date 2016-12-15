@@ -12,6 +12,20 @@
   -ms-#{$property}: $value
   #{$property}: $value
 
+=input($inputs)
+  %content
+    @content
+  @each $input in $inputs
+    input[type="#{$input}"]
+      @extend %content
+
+=elem($elements)
+  %content
+    @content
+  @each $element in $elements
+    input[type="#{$element}"]
+      @extend %content
+
 
 =placeholders
   &::-webkit-input-placeholder
@@ -126,89 +140,8 @@
   width: $prop
   height: $prop
 
-=global
-  \:root
-    font-size: $rootSize + px
-  /*Global Css starts*/
-  a
-    color: bgc($link-color,.5)
-    text-decoration: none
-    outline: none
-    +transition(all 0.5s ease)
-
-  body
-    line-height: 1
-    font: rem($body-size) $pf
-    color: $body-color
-    position: relative
-    background: $body-bg
-
-  *
-    +sizing(border-box)
-    +break-word(keep-all)
-    &:after,
-    &:before
-      @extend *
-
-  img
-    max-width: 100%
-    vertical-align: middle
-  .container
-    margin: 0 auto
-    width: 96%
-    max-width: $cntMxWidth
-  .fl
-    float: left
-  .fr
-    float: right
-  .text-right
-    text-align: right
-  .text-left
-    text-align: left
-  .text-center
-    text-align: center
-  p
-    font: 300 rem(16) / rem(24) $sf
-    padding-bottom: 12px
 
 
-  // including clear
-  +clear(3, 20)
-  // heading property
-  %h1,
-  h1
-    color: $pc
-    font: rem($heading-size) $pf
-    padding-bottom: 12px
-
-  +headings($heading-size-differnce)
-  .desktop-only
-    display: block
-
-  .mobile-only,
-  .tab-mobile-only,
-  .tab-only
-    display: none
-
-  .loader
-    background: bg('loader.gif') no-repeat scroll center center bgc(#203651)
-    height: 100%
-    left: 0
-    position: fixed
-    top: 0
-    width: 100%
-    z-index: 99999
-
-  .loader.loaded
-    top: -100%
-
-  /*Global Css End*/
-
-
-=input($prop...)
-  @each $type in $prop
-    input[type=#{$type}]
-      @content
 
 =customChooseField($size : 20px)
   %cmn
@@ -274,61 +207,7 @@
         opacity: 0
 
 
-=responsiveTable($count:10)
-  .responsive-table
-    dl
-      li
-        float: left
-        .col
-          float: left
-          padding: 10px 7px
-      @for $i from 1 through $count
-        .total-col-#{$i}
-          .col
-            width: unquote(100 / $i + '%')
-      dt
-        +clrfix
-        li
-          .col
-            font: 600 16px $pf
-            background-color: #ddd
-      dd
-        +clrfix
-        li
-          +clrfix
-          .col
-            font: 400 16px $pf
-  +mq(max,1024px)
-    .responsive-table
-      +clrfix
-      dl
-        margin: 0 -1%
-        dt
-          display: none
 
-        dd
-          float: left
-          width: 48%
-          border: 1px solid #ddd
-          margin: 0 1% 20px
-          li
-            float: none
-            &.primary
-              background: $sc
-              color: lighten($sc, 100%)
-  +mq(max,640px)
-    .responsive-table
-      dl
-        margin: 0
-        dd
-          width: 100%
-          margin: 0 0 20px
-  +mq(max,320px)
-    .responsive-table
-      dl
-        dd
-          .col
-            width: 100% !important
 
 =cg($col,$spc)
   width: (100% - ($spc * ($col - 1))) / $col
@@ -347,14 +226,6 @@
     @media (min-width: nth($arg,1)) and (max-width: nth($arg,2))
       @content
 
-//mgrid stands for manual grid
-=mgrid($col,$spc)
-  width: (100% / $col) - $spc
-  margin-right: $spc
-  margin-bottom: $spc
-  &:nth-child(#{$col}n+#{$col})
-    margin-right: 0
-
 
 =grid($ext,$totalClums:12)
   .grid-layout
@@ -371,7 +242,7 @@
 
 
 
-=listItrem($types...)
+=listItem($types...)
   ol.list,
   ul.list
     margin-left: 27px
@@ -386,205 +257,10 @@
         background: bg('bullet.png') no-repeat scroll left center rgba(0, 0, 0, 0)
         padding: 5px 0 5px 18px
 
-
-
   @each $listType in $types
     ol.#{$listType},
     ul.#{$listType}
       li
         list-style-type: $listType
 
-
-
-
-=messages($params...)
-  /*Session Error messages*/
-  .message
-    border: medium none
-    font: 18px $pf
-    margin: 0 0 15px
-    padding: 10px
-    position: relative
-    @each $session-message, $baseColor in $params
-      &.#{$session-message}
-        background-color: lighten($baseColor,40%)
-        color: $baseColor
-
-
-
   /*Session error message end*/
-
-=pagination
-  /*Pagination*/
-  .pagination
-    padding-bottom: 20px
-    +clrfix
-    &.at-right
-      text-align: right
-
-    &.at-left
-      text-align: left
-
-    &.at-center
-      text-align: center
-
-    ul
-      display: inline-block
-      border: 1px solid #b2b2b2
-      background-color: #eee
-      border-left: none
-
-    %paginationHover
-      background-color: #0079C1
-      color: #fff
-
-    li
-      border-left: 1px solid #b2b2b2
-      padding: 0
-      vertical-align: middle
-      float: left
-      a,
-      span
-        display: block
-        padding: 5px 13px
-        &:hover
-          @extend %paginationHover
-
-
-      &.active
-        a
-          @extend %paginationHover
-
-
-
-
-  /*Pagination End*/
-
-=table
-  %td
-    color: #535353
-    margin: 0
-    min-width: 120px
-    padding: 10px
-    text-align: left
-    width: 120px
-
-  .table
-    width: 100%
-    background: #fff
-    font-size: 12px
-    margin-bottom: 15px
-    &.with-strip
-      tr:nth-child(2n+1)
-        td
-          background-color: #eee
-
-
-
-    &.with-border
-      border-left: 1px solid #dbdbe9
-      border-top: 1px solid #dbdbe9
-      td
-        border-bottom: 1px solid #dbdbe9
-        border-right: 1px solid #dbdbe9
-
-
-    td
-      @extend %td
-
-    th
-      background: #444
-      color: #fff
-      font-size: rem(16)
-      text-transform: uppercase
-      @extend %td
-
-    .status
-      color: #16930d
-
-
-  /*Table end*/
-
-=overlay
-  /*overlay */
-  .overlay-bg
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5)
-    height: 100%
-    left: 0
-    margin: 0 auto
-    position: fixed
-    top: 0
-    width: 100%
-    z-index: 100000
-
-  .overlay
-    height: 100%
-    left: 0
-    margin: 0 auto
-    position: fixed
-    top: 0
-    width: 100%
-    z-index: 100001
-    visibility: hidden
-    .overlay-box
-      display: table
-      height: inherit
-      margin: 0 auto
-      width: 600px
-      .content
-        display: table-cell
-        vertical-align: middle
-
-      .closeBtn
-        background: none repeat scroll 0 0 #FFFFFF
-        border-radius: 5px
-        color: #2A78CB
-        cursor: pointer
-        font: bold 17px/25px Arial, Helvetica, sans-serif
-        height: 25px
-        padding: 0
-        position: absolute
-        right: 10px
-        text-align: center
-        top: 10px
-        width: 25px
-        z-index: 1002
-
-      .overlay-header
-        background: none repeat scroll 0 0 #4066ae
-        color: #fff
-        font: 600 19px "Open Sans", serif
-        padding: 9px 10px
-        position: relative
-
-      .overlay-content
-        padding: 20px 10px
-        background: none repeat scroll 0 0 #fff
-
-      .overlay-footer
-        padding: 9px 10px
-        background: #e3e3e3
-        text-align: right
-
-
-
-
-=cssDisplay
-  .ds-table
-    display: table
-    width: 100%
-    height: inherit
-
-  .ds-table-cell
-    display: table-cell
-    vertical-align: middle
-
-  .ds-block
-    display: block
-
-  .ds-inline-block
-    display: inline-block
-    vertical-align: middle
-
-  .ds-inline
-    display: inline

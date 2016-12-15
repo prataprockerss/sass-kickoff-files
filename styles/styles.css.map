@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;KAAE;EAyEA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,IAAI,EAAE,OAAO;EACb,cAAc,EAAE,QAAQ;;AAE1B;;;;;;;;;;OAAQ;EAWN,OAAO,EAAE,KAAK;;AAEhB;EAAG;EAED,UAAU,EAAE,IAAI;;AAElB;CAAW;EAET,MAAM,EAAE,IAAI;EACZ;;UAAQ;IAEN,OAAO,EAAE,EAAE;;AAGf,KAAK;EACH,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,CAAC;;;ACzGf,kBAAuB;EAQzB,UAAU,EAAE,MAAM;;AARhB,oBAAuB;EAQzB,UAAU,EAAE,MAAM;;AAJhB,GAAW;EAIb,UAAU,EAAE,MAAM;;ACVpB,KAAK;ECwEH,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,GAAc;EACpB,GAAG,EAAE,GAAa;EAlElB,iBAAoB,EAAE,qBAAM;EAC5B,YAAe,EAAE,qBAAM;EACvB,cAAiB,EAAE,qBAAM;EACzB,aAAgB,EAAE,qBAAM;EACxB,SAAY,EAAE,qBAAM",
-"sources": ["../sass/1-tools/_reset.sass","../sass/2-modules/_form.sass","../sass/3-pages/_documentation.sass","../sass/1-tools/_component.sass"],
+"mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;KAAE;EAyEA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,IAAI,EAAE,OAAO;EACb,cAAc,EAAE,QAAQ;;AAE1B;;;;;;;;;;OAAQ;EAWN,OAAO,EAAE,KAAK;;AAEhB;EAAG;EAED,UAAU,EAAE,IAAI;;AAElB;CAAW;EAET,MAAM,EAAE,IAAI;EACZ;;UAAQ;IAEN,OAAO,EAAE,EAAE;;AAGf,KAAK;EACH,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,CAAC;;;AC3GnB,KAAK;EACH,UAAU,EAAE,MAAM;EC6NhB,0BAA0C;ID9N9C,KAAK;MAGD,UAAU,EAAE,IAAI;;AC2NhB,0BAA0C;EDzN9C,IAAI;IAEA,UAAU,EAAE,OAAO",
+"sources": ["../sass/1-tools/_reset.sass","../sass/3-pages/_documentation.sass","../sass/1-tools/_component.sass"],
 "names": [],
 "file": "styles.css"
 }

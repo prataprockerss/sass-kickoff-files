@@ -83,11 +83,11 @@
 =transition($prop : all .5s ease)
   +prefix( 'transition',$prop)
 
-=vam($left:'50%',$top:'50%')
+=vam($left:50%,$top:50%)
   position: absolute
-  left: unquote($left)
-  top: unquote($top)
-  +transform(translate(-(unquote($left)),-(unquote($top))))
+  left: $left
+  top: $top
+  +transform(translate(-($left),-($top)))
 
 =transform($prop...)
   +prefix( 'transform',$prop)

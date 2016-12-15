@@ -33,45 +33,55 @@ span,label
     background: none repeat scroll 0 0 #f00
     color: #fff
     display: inline-block
-    font-size: 12px
+    font-size: 14px
     margin-top: 10px
     padding: 4px 10px
     position: relative
 /*Common Buttons*/
-$pad: 10px
-a.box-btn,
-button.box-btn,
+$pad: 12px
+a,
+button,
 input[type=button],
 input[type=reset],
-input[type=submit]
-  display: inline-block
+input[type=submit],
+  background-color: transparent
+  font: 400 16px $pf
   border: none
+  padding: 0
   cursor: pointer
-  color: lighten($pc, 100%)
-  font: 400 rem(16) $pf
-  letter-spacing: 2px
-  text-transform: uppercase
-  vertical-align: middle
-  text-decoration: none
-  text-align: center
-  +transition
-  &.box-btn
-    padding: $pad 15px
-    margin: 5px
+  &.box-btn,
+    display: inline-block
+    margin-right: 10px
+    +mq(max,767px)
+      margin-right: 0
     background-color: $pc
+    border: none
+    cursor: pointer
+    padding: $pad 25px
+    background-color: #39c0d4
+    color: #fff
+    letter-spacing: 2px
+    text-transform: uppercase
+    vertical-align: middle
+    text-decoration: none
+    text-align: center
+    font: 800 11px $pf
+    border: 1px solid #39c0d4
+    border-radius: 50px
+    +transition
+    &.active,&:hover
+      background-color: lighten(#39c0d4, 20)
   &.full-btn
     display: block
     width: 100%
     margin: 0
   &.rounded
     border-radius: 50px
-  &.active,&:hover
-    background-color: lighten($pc, 20)
   &.secondary-btn
-    background-color: $sc
-    color: lighten($sc, 100%)
+    background-color: #fff
+    color: #39c0d4
     &.active,&:hover
-      background-color: lighten($sc, 10)
+      background-color: lighten(#fff, 10)
   &:active,&:focus
     outline: none
 /*hack for mozzila */

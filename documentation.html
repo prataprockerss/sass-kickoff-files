@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <title>Page title</title>
-  <link rel="stylesheet" type="text/css" href="styles/documentation.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper documents">
     <div class="container">
       <section class="intro">
         <header>
@@ -33,7 +33,10 @@
     |  |--All '.png, .jpg' files
     |
     |--sass
-    |  |--All '.scss' files
+    |  |-- 1 Tools for common tools or external tool like burbon or compass
+    |  |-- 2 Modules project specific modules which you are using
+    |  |-- 3 Pages specific pages style
+    |  |-- style.sass inclde all in one
     |
     |--styles
     |  |--All '.css' files (rendered from sass)
@@ -81,10 +84,10 @@
           Template
         </header>
         <article>
-          
-          <div class="code-container"> <div class="copy-to-clipboard">copy</div>
-<pre><code data-language="html">
 
+          <div class="code-container"> <div class="copy-to-clipboard"></div>
+<pre><code data-language="html">
+test
 </code></pre>
           </div>
         </article>
@@ -93,6 +96,7 @@
 
   </div>
   <script src="scripts/jquery-min.js" type="text/javascript"></script>
+  <script src="scripts/component/clipboard.js" type="text/javascript"></script>
   <script src="scripts/component/main.js" type="text/javascript"></script>
 </body>
 

@@ -1,425 +1,58 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,400,500,700,900");
-a,
-abbr,
-acronym,
-address,
-article,
-aside,
-audio,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike tt,
-summary,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-ul,
-var,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+/*
+Error: File to import not found or unreadable: 1-tools/bourbon/bourbon.
+       Load path: E:/resource-library/sass-kickoff-files/sass
+        on line 2 of ../sass/styles.sass
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
+1: 
+2: @import "1-tools/bourbon/bourbon"
+3: @import "1-tools/_fonts"
+4: @import "1-tools/_variable"
+5: @import "1-tools/_mixins"
+6: @import "1-tools/_reset"
+7: 
 
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-  blockquote:after, blockquote:before,
-  q:after,
-  q:before {
-    content: ""; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/*Reset css end */
-:root {
-  font-size: 16px; }
-
-/*Global Css starts */
-a {
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  outline: none;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-body {
-  line-height: 1;
-  font: 1rem "Roboto", sans-serif;
-  color: #000;
-  position: relative;
-  background: #fff; }
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-word-break: keep-all;
-  -o-word-break: keep-all;
-  -moz-word-break: keep-all;
-  -ms-word-break: keep-all;
-  word-break: keep-all; }
-
-img {
-  max-width: 100%;
-  vertical-align: middle; }
-
-.container {
-  margin: 0 auto;
-  width: 96%;
-  max-width: 1400px; }
-
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
-
-.text-right {
-  text-align: right; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
-p {
-  font: 300 1rem/1.5rem "Droid Serif", serif;
-  padding-bottom: 12px; }
-
-.clear20, .clear40, .clear60,
-.clear {
-  clear: both; }
-
-.clear20 {
-  height: 20px; }
-
-.clear40 {
-  height: 40px; }
-
-.clear60 {
-  height: 60px; }
-
-h2, h3, h4, h5, h6,
-h1 {
-  color: #53BA2E;
-  font: 2.125rem "Roboto", sans-serif;
-  padding-bottom: 12px; }
-
-h2 {
-  font-size: 1.9375rem; }
-
-h3 {
-  font-size: 1.75rem; }
-
-h4 {
-  font-size: 1.5625rem; }
-
-h5 {
-  font-size: 1.375rem; }
-
-h6 {
-  font-size: 1.1875rem; }
-
-.desktop-only {
-  display: block; }
-
-.mobile-only,
-.tab-mobile-only,
-.tab-only {
-  display: none; }
-
-.loader {
-  background: url("../images/loader.gif") no-repeat scroll center center #203651;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99999; }
-
-.loader.loaded {
-  top: -100%; }
-
-/*Global Css End */
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes fade {
-  10% {
-    transform: scale(1, 1); }
-  35% {
-    transform: scale(1, 1.7); }
-  40% {
-    transform: scale(1, 1.7); }
-  50% {
-    opacity: 1; }
-  60% {
-    transform: scale(1, 1); }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0; } }
-[class^="lang"] code,
-[data-language] code,
-pre [class^="lang"],
-pre [data-language] {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  animation: 50ms ease-in-out 2s forwards fade-in; }
-
-[class^="lang"] code.rainbow,
-[data-language] code.rainbow,
-pre [class^="lang"].rainbow,
-pre [data-language].rainbow {
-  animation-delay: 0s; }
-
-[class^="lang"] code.loading,
-[data-language] code.loading,
-pre [class^="lang"].loading,
-pre [data-language].loading {
-  animation-play-state: paused; }
-
-pre {
-  position: relative; }
-
-pre.loading .preloader div {
-  animation-play-state: running; }
-
-pre.loading .preloader div:nth-of-type(1) {
-  background: #0081f5;
-  animation: fade 1.5s 300ms linear infinite; }
-
-pre.loading .preloader div:nth-of-type(2) {
-  background: #5000f5;
-  animation: fade 1.5s 438ms linear infinite; }
-
-pre.loading .preloader div:nth-of-type(3) {
-  background: #9000f5;
-  animation: fade 1.5s 577ms linear infinite; }
-
-pre.loading .preloader div:nth-of-type(4) {
-  background: #f50419;
-  animation: fade 1.5s 715ms linear infinite; }
-
-pre.loading .preloader div:nth-of-type(5) {
-  background: #f57900;
-  animation: fade 1.5s 853ms linear infinite; }
-
-pre.loading .preloader div:nth-of-type(6) {
-  background: #f5e600;
-  animation: fade 1.5s 992ms linear infinite; }
-
-pre.loading .preloader div:nth-of-type(7) {
-  background: #00f50c;
-  animation: fade 1.5s 1130ms linear infinite; }
-
-pre .preloader {
-  position: absolute;
-  top: 12px;
-  left: 10px; }
-
-pre .preloader div {
-  width: 12px;
-  height: 12px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-right: 4px;
-  opacity: 0;
-  animation-play-state: paused;
-  animation-fill-mode: forwards; }
-
-pre {
-  background-color: #000;
-  word-wrap: break-word;
-  margin: 0;
-  padding: 10px;
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-
-code,
-pre {
-  font-family: "Monaco", "Menlo", courier, monospace; }
-
-pre {
-  background-color: #1d1f21;
-  color: #c5c8c6; }
-
-pre .comment {
-  color: #969896; }
-
-pre .variable.class,
-pre .variable.global,
-pre .variable.instance {
-  color: #c66; }
-
-pre .constant.hex-color,
-pre .constant.language,
-pre .constant.numeric,
-pre .keyword.unit {
-  color: #de935f; }
-
-pre .constant,
-pre .entity,
-pre .entity.class,
-pre .support {
-  color: #f0c674; }
-
-pre .constant.symbol,
-pre .string {
-  color: #b5bd68; }
-
-pre .entity.function,
-pre .selector,
-pre .support.css-property {
-  color: #81a2be; }
-
-pre .keyword,
-pre .storage {
-  color: #b294bb; }
-
-.documents section {
-  padding-bottom: 1.25rem; }
-  .documents section header {
-    text-transform: uppercase;
-    font: 1.5625rem "Roboto", sans-serif;
-    letter-spacing: 2px;
-    color: #53BA2E;
-    padding: 0.625rem 0; }
-  .documents section article {
-    font: 1.125rem "Droid Serif", serif; }
-  .documents section.colors article ul:after {
-    clear: both;
-    content: "";
-    display: block; }
-  .documents section.colors article li {
-    float: left;
-    width: 20%;
-    text-align: center; }
-    .documents section.colors article li .color {
-      display: inline-block;
-      width: 70px;
-      height: 70px; }
-      .documents section.colors article li .color.pc {
-        background-color: #53BA2E; }
-      .documents section.colors article li .color.sc {
-        background-color: #952eba; }
-      .documents section.colors article li .color.cv1 {
-        background-color: #ac45d1; }
-      .documents section.colors article li .color.cv2 {
-        background-color: #6ad145; }
-    .documents section.colors article li span {
-      display: block;
-      text-align: center;
-      padding: 5px 0;
-      font: 1.125rem "Droid Serif", serif; }
-  .documents section .code-container {
-    position: relative; }
-    .documents section .code-container .copy-to-clipboard {
-      opacity: 0;
-      -webkit-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
-      border-radius: 2px;
-      background: url("../images/copy-to-clipboard.png") no-repeat center center/70% auto #fff;
-      position: absolute;
-      right: 4px;
-      top: 4px;
-      z-index: 10;
-      border: none; }
-    .documents section .code-container:hover .copy-to-clipboard {
-      opacity: 1; }
-
-/*# sourceMappingURL=styles.css.map */
+Backtrace:
+../sass/styles.sass:2
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: 1-tools/bourbon/bourbon.\A        Load path: E:/resource-library/sass-kickoff-files/sass\A         on line 2 of ../sass/styles.sass\A \A 1: \A 2: @import \"1-tools/bourbon/bourbon\"\A 3: @import \"1-tools/_fonts\"\A 4: @import \"1-tools/_variable\"\A 5: @import \"1-tools/_mixins\"\A 6: @import \"1-tools/_reset\"\A 7: "; }

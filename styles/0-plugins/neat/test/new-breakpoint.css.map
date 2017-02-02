@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGE,IAAK;EACH,UAAU,EAAE,UAAU;;AAItB,sBAEU;EACR,UAAU,EAAE,OAAO;;AC2ErB,oCAAuB;EClF3B,mBAAoB;IAEhB,KAAK,EAAE,IAAI;;AAIf,wBAAyB;EACvB,KAAK,ECiCuB,kBAA+C",
+"sources": ["../../../../sass/0-plugins/neat/app/assets/stylesheets/grid/_box-sizing.scss","../../../../sass/0-plugins/neat/app/assets/stylesheets/grid/_media.scss","../../../../sass/0-plugins/neat/test/new-breakpoint.scss","../../../../sass/0-plugins/neat/app/assets/stylesheets/functions/_new-breakpoint.scss"],
+"names": [],
+"file": "new-breakpoint.css"
+}

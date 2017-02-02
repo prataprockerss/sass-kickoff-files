@@ -1,21 +1,29 @@
 
-@import "_variable"
-@import "_component"
-@import "_fonts"
-@import "_reset"
-@import "_global"
+@import "1-tools/bourbon/bourbon"
+@import "1-tools/_fonts"
+@import "1-tools/_variable"
+@import "1-tools/_mixins"
+@import "1-tools/_reset"
 
 
-// @import "_loader"
-// @import "_form"
-// @import "_messages"
-// @import "_pagination"
-// @import "_table"
-// @import "_pagination"
-// @import "_responsiveTable"
+@import "2-basics/_body-element"
+@import "2-basics/_global"
+@import "2-basics/_links"
+@import "2-basics/_typography"
 
-@import "_rainbow"
+@import "3-modules/_form"
+@import "3-modules/_loader"
+@import "3-modules/_messages"
+@import "3-modules/_overlay"
+@import "3-modules/_pagination"
+@import "3-modules/_responsive-table"
+@import "3-modules/_table"
+
+// sass for external plugins
+@import "3-modules/_rainbow"
+@import "3-modules/_select2"
+@import "3-modules/_slick"
 
 
-@import "_common"
-@import "_documentation"
+@import "4-pages/_common"
+// @import "4-pages/_documentatio:;n"

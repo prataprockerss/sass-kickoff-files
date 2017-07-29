@@ -1,24 +1,47 @@
-$pf: 'Roboto', sans-serif
-$sf: 'Droid Serif', serif
+=mq($arg...)
+  @if type_of(nth($arg,1)) == string
+    @media (#{nth($arg,1)}-width: nth($arg,2))
+      @content
+  @else
+    @media (min-width: nth($arg,1)) and (max-width: nth($arg,2))
+      @content
 
-$image-path:'../images/'
+=mqh($arg...)
+  @if type_of(nth($arg,1)) == string
+    @media (#{nth($arg,1)}-height: nth($arg,2))
+      @content
+  @else
+    @media (min-height: nth($arg,1)) and (max-height: nth($arg,2))
+      @content
 
-$rootSize: 16
-$cntMxWidth:1400px
+
+$pf: 'Montserrat', sans-serif
+$sf: 'Open Sans', sans-serif
+$fa: 'FontAwesome'
+
+
+$image-path: '../images/'
+
+
+$rootSize: 16px
+
+$cntMxWidth: 1200px
++mq(min,1600px)
+  $cntMxWidth: 1900px
+
 
 //colors in websites
-$pc:#53BA2E
-$sc:complement($pc)
+$pc: #3cbdbb
+$sc: complement($pc)
 $cv1: invert($pc)
 $cv2: invert($sc)
 
-$body-bg:#fff
-$body-color:#000
-$link-color:#000
+$body-bg: #fff
+$link-color: #000
 
 
 // font sizes
-$body-size:16
-$heading-size:34
-$heading-size-differnce:3
-$footer-height:0
+$body-size: 16
+$heading-size: 34
+$heading-size-differnce: 3
+$footer-height: 0

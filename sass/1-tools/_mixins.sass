@@ -1,4 +1,5 @@
 @import "_variable.sass"
+
 @function bg($imageName)
   @return url($image-path + $imageName)
 
@@ -11,10 +12,6 @@
   -moz-#{$property}: $value
   -ms-#{$property}: $value
   #{$property}: $value
-
-=ib($align:middle)
-  display: inline-block
-  vertical-align: $align
 
 =placeholders
   &::-webkit-input-placeholder
@@ -65,57 +62,3 @@
     .clear#{$increment * $i}
       @extend %clear
       height: $increment * $i+px
-
-
-
-
-
-
-=socialMedia($ext, $prop...)
-  @each $list in $prop
-    .#{$list}
-      background: bg($list + ($ext))
-
-
-
-=wh($prop)
-  width: $prop
-  height: $prop
-
-
-=cg($col,$spc)
-  width: (100% - ($spc * ($col - 1))) / $col
-  margin-right: $spc
-  margin-bottom: $spc
-  float: left
-  &:nth-child(#{$col}n+#{$col})
-    margin-right: 0
-
-
-
-
-
-
-
-=listItem($types...)
-  ol.list,
-  ul.list
-    margin-left: 27px
-    padding-bottom: 14px
-    font: rem(20) $sf
-    li
-      padding: 5px 0 5px 7px
-
-    &.bullet
-      margin-left: 10px
-      li
-        background: bg('bullet.png') no-repeat scroll left center rgba(0, 0, 0, 0)
-        padding: 5px 0 5px 18px
-
-  @each $listType in $types
-    ol.#{$listType},
-    ul.#{$listType}
-      li
-        list-style-type: $listType
-
-  /*Session error message end*/
